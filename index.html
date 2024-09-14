@@ -140,6 +140,19 @@
     height: auto; /* Sesuaikan ukuran logo jika diperlukan */
     max-width: 100%;
 }
+
+           #clock {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+           }
+        
         header h1 {
             font-family: 'Gloria Hallelujah', cursive;
             font-size: 2.5rem;
@@ -528,7 +541,8 @@ credit h5 {
 
             <h2>Harga</h2>
             <p>Meskipun harga yang kami berikan sedikit lebih mahal tidak seperti harga di pasaran, kami menggunakan bahan yang berkualitas dan pastinya steril/bersih. Untuk harga yang kita pasang di bawah adalah harga satuannya:</p>
-           
+            
+            <div id="clock"></div>
             <!-- Slider -->
             <div class="slider">
                 <div class="slides">
@@ -776,6 +790,19 @@ function sendToTelegram(userName) {
         console.error("Error saat mengirim nama ke Telegram:", error);
     });
 }
+          function updateClock() {
+            const options = {
+                timeZone: 'Asia/Jakarta', 
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            };
+            const now = new Date().toLocaleTimeString('en-US', options);
+            document.getElementById('clock').textContent = now;
+        }
+
+        setInterval(updateClock, 1000); // Update every second
+        updateClock(); // Initial call
     </script>
 </body>
 
