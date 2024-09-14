@@ -10,11 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Nerko+One&display=swap" rel="stylesheet">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1901305872435031"
-     crossorigin="anonymous"></script>
-    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Nerko+One&display=swap" rel="stylesheet">
+
     <style>
         body {
             font-family: 'Nerko one', cursive;
@@ -26,10 +24,9 @@
             justify-content: center;
             align-items: center;
         }
-        
 
         .loading-container {
-            display: flex ;
+            display: flex;
             flex-direction: column;
             align-items: center;
             position: absolute;
@@ -53,62 +50,24 @@
                 linear-gradient(#fff 0 0) 50%/10px 100% no-repeat,
                 conic-gradient(from 90deg at 10px 10px, #0000 90deg, #fff 0),
                 conic-gradient(from -90deg at 60px 30px, #0000 90deg, #fff 0);
-            animation: l2 2s infinite;
         }
-       .loading-animation-text {
-    font-family: 'Handjet', sans-serif;
-    font-size: 31px;
-    font-weight: bold;
-    color: #FF1493;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    animation: textGlow 5s ease-in-out infinite, slideIn 5s ease-in-out infinite, fadeInOut 5s ease-in-out infinite;
-}
 
-@keyframes textGlow {
-    0% {
-        text-shadow: 0 0 10px #FF1493, 0 0 20px #000000, 0 0 30px #FF1493, 0 0 40px #FF1493;
-    }
-    50% {
-        text-shadow: 0 0 20px #FF4500, 0 0 30px #FF4500, 0 0 40px #FF4500, 0 0 50px #FF4500;
-    }
-    100% {
-        text-shadow: 0 0 10px #FF1493, 0 0 20px #FF1493, 0 0 30px #FF1493, 0 0 40px #FF1493;
-    }
-}
-
-@keyframes slideIn {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    50% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-    100% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-}
-
-@keyframes fadeInOut {
-    0%, 100% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-}
-        
+        .loading-animation-text {
+            font-family: 'Handjet', sans-serif;
+            font-size: 31px;
+            font-weight: bold;
+            color: #FF1493;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            /* Animasi dihilangkan */
+        }
 
         #main-content {
             opacity: 0;
             transition: opacity 1s ease;
             max-width: 1200px;
-            margin:0 auto;
+            margin: 0 auto;
             padding: 20px;
-            
         }
 
         body.visible #main-content {
@@ -126,10 +85,10 @@
             text-align: center;
             color: #fff;
             border-radius: 0 0 30px 30px;
-    position: relative;
-}
+            position: relative;
+        }
 
-.logo-sticky {
+        .logo-sticky {
     position: sticky;
     top: 0;
     left: 0;
@@ -149,8 +108,8 @@
             right: 10px;
             font-size: 14px;
             font-family: Arial, sans-serif;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
+            background-color: rgba(255, 245, 245, 1);
+            color: #000000;
             padding: 5px 10px;
             border-radius: 5px;
            }
@@ -267,8 +226,8 @@
         }
         
 
-        .button {
-            background-color: #ff1493;
+       .button {
+            background-color: #CBB074;
             color: #fff;
             padding: 12px 25px;
             text-decoration: none;
@@ -422,11 +381,24 @@ footer a:hover {
             background-color: rgba(0, 0, 0, 0.8);
         }
 
-        @media (max-width: 768px) {
-            .product-list {
-                flex-direction: column
-                align-items: center;
-            }
+    @media only screen and (max-width: 768px) {
+    /* CSS untuk tampilan mobile */
+    body {
+        font-size: 14px;
+        background-color: #f0f0f0;
+    }
+    .desktop-only {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    /* CSS untuk tampilan desktop */
+    body {
+        font-size: 18px;
+        background-color: #fff;
+    }
+}
 
             .product-item {
                 width: 100%;
@@ -500,23 +472,22 @@ credit h5 {
     font-size: 16px;
     color: #555;
 }
-            
     </style>
 </head>
 
 <body>
     <!-- Animasi Loading -->
-<div class="loading-container">
-  <div class="loading-animation-text">Dapur Adini Family✨...</div>
-</div>
-         <!-- Konten Utama -->
-    
+    <div class="loading-container">
+        <div class="loading-animation-text">Dapur Adini Family✨...</div>
+    </div>
+
+    <!-- Konten Utama -->
     <div id="main-content">
         <header>
-           <div class="logo-sticky">
-            <img src="logo.png" alt="Logo">
-        </div>
-        
+            <div class="logo-sticky">
+                <img src="logo.png" alt="Logo">
+            </div>
+
             <h1>Dapur Adini Family</h1>
             <p>"Kami percaya, kue yang enak itu dimulai dari bahan-bahan berkualitas. Itu sebabnya, kami selalu memilih bahan-bahan segar dan alami untuk setiap kreasi kami. ✨"</p>
             <nav>
@@ -533,6 +504,7 @@ credit h5 {
             <p>Kami menyediakan berbagai camilan lezat dan bergizi, siap memanjakan lidah Anda. Jangan lupa, di setiap gigitan ada kenangan manis yang akan Anda ingat selamanya.</p>
         </section>
         
+            
          <div class="stiker-img">
           <img src="https://media1.giphy.com/media/26n6Aa010xeztyyFG/giphy.gif?cid=6c09b9521csr1v9evop1z70jktk5bmskjl5u7gxrfu9bijn3&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s" alt="gift"
         </div>
@@ -540,20 +512,10 @@ credit h5 {
         <section id="about">
             <h2>Tentang Kami</h2>
             <p>Di Dapur Adini Family, kami menghidangkan cita rasa istimewa dalam setiap gigitan. Kami memulai bisnis di rumah dan kami menggunakan bahan-bahan berkualitas, kami menghadirkan kue-kue yang tidak hanya lezat tapi juga penuh kehangatan. Terima kasih telah menjadi bagian dari perjalanan rasa kami.</p>
-
+<script type='text/javascript' src='//pl24377711.cpmrevenuegate.com/df/18/b2/df18b2daf4ced878843b9c296d179ad1.js'></script>
             <h2>Harga</h2>
             <p>Meskipun harga yang kami berikan sedikit lebih mahal tidak seperti harga di pasaran, kami menggunakan bahan yang berkualitas dan pastinya steril/bersih. Untuk harga yang kita pasang di bawah adalah harga satuannya:</p>
-
-            <script type="text/javascript">
-	atOptions = {
-		'key' : '3feedeb4f8d6fff50872f3f02bee29b6',
-		'format' : 'iframe',
-		'height' : 250,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.topcreativeformat.com/3feedeb4f8d6fff50872f3f02bee29b6/invoke.js"></script>
+            
             <div id="clock"></div>
             <!-- Slider -->
             <div class="slider">
@@ -582,7 +544,7 @@ credit h5 {
                     <span class="dot" onclick="currentSlide(4)"></span>
                 </div>
             </div>
-            
+           
         </section>
 
         <!-- Produk Kami -->
@@ -596,6 +558,8 @@ credit h5 {
                     <h4>Rp3.000/Satuan</h4>
                     <a href="https://api.whatsapp.com/send?phone=62815746477410&text=Saya%20mau%20pesan%20Talam%20ebi" class="button">Pesan Sekarang</a>
                 </div>
+                
+                <script type='text/javascript' src='//pl24377711.cpmrevenuegate.com/df/18/b2/df18b2daf4ced878843b9c296d179ad1.js'></script>
 
                    <div class="product-item">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZBU4ETniqfbeVomtZKJCDUOrYGJqf16vh0w&usqp=CAU" alt="Kue Pai Buah">
@@ -631,6 +595,8 @@ credit h5 {
                     <a href="https://api.whatsapp.com/send?phone=" target="_blank" class="button">coming soon</a>
                       </div>
              
+             <script type='text/javascript' src='//pl24377711.cpmrevenuegate.com/df/18/b2/df18b2daf4ced878843b9c296d179ad1.js'></script>
+             
         
          <div class="team-container">
         <h1>Website contributing team</h1>
@@ -651,6 +617,13 @@ credit h5 {
             <p>Penulis Konten</p>
         </div>
     </div>
+    
+              <h2>Iklan</h2>
+            
+     <script async="async" data-cfasync="false" src="//pl24378086.cpmrevenuegate.com/bd52656249b8103d27d3f9a38938dcbb/invoke.js"></script>
+<div id="container-bd52656249b8103d27d3f9a38938dcbb"></div>
+            
+            <hr>
 
 <footer style="background-color: #96966B; padding: 30px; text-align: center; color: white;">
     <img src="logo.png" alt="Dapur Adini Family" style="width: 130px; margin-bottom: 20px;">
@@ -680,14 +653,25 @@ credit h5 {
                 <li><a href="#" style="color: white; text-decoration: none;">Kebijakan Privasi</a></li>
             </ul>
         </div>
-    </div>
-    <p style="margin-top: 30px;">&copy; 2024 Dapur Adini Family. Semua hak dilindungi undang-undang.</p>
+        </div>
+
+   
+   <p style="margin-top: 30px;">&copy; 2024 Dapur Adini Family. Semua hak dilindungi undang-undang.</p>
     <div class="credit" style="font-size: 14px; margin-top: 10px;">
         <h5>Website by: M.hilmi</h5>
     </div>
 </footer>
 
-
+ <script type="text/javascript">
+	atOptions = {
+		'key' : '6546ee62971c8cc74cb5c5f83024b530',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.topcreativeformat.com/6546ee62971c8cc74cb5c5f83024b530/invoke.js"></script>
 
         <!-- Back to Top Button -->
         <button id="backToTopButton" onclick="scrollToTop()">️↑</button>
@@ -698,44 +682,7 @@ credit h5 {
         setTimeout(function() {
             document.body.classList.add('visible');
             document.querySelector('.loading-container').classList.add('stopped');
-        }, 9000);
-
-        let slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-            let slides = document.getElementsByClassName("slide");
-            let dots = document.getElementsByClassName("dot");
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
-            }
-            for (let i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-            setTimeout(showSlides, 4000); // Change slide every 4 seconds
-        }
-
-        function moveSlide(n) {
-            slideIndex += n;
-            if (slideIndex < 1) {
-                slideIndex = slides.length;
-            }
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
-            }
-            showSlides();
-        }
-
-        function currentSlide(n) {
-            slideIndex = n;
-            showSlides();
-        }
+        }, 1000);
 
         // Back to Top Button Script
         const backToTopButton = document.getElementById('backToTopButton');
@@ -748,7 +695,7 @@ credit h5 {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 backToTopButton.style.display = "block";
             } else {
-                backToTopButton.style.display = "none";
+              backToTopButton.style.display = "none";
             }
         }
 
@@ -756,55 +703,11 @@ credit h5 {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         }
-        
-        
 
-// Fungsi untuk menampilkan pop-up dan meminta nama
-window.onload = function() {
-    let userName = prompt("Silakan masukkan nama Anda:");
-    
-    if (userName) {
-        // Menampilkan pesan selamat datang yang dipersonalisasi
-        document.getElementById("welcome-message").innerHTML = `Welcome to Dapur Adini Family, ${userName}!`;
-
-        // Kirim nama ke bot Telegram
-        sendToTelegram(userName);
-    }
-};
-
-// Fungsi untuk mengirim nama ke bot Telegram
-function sendToTelegram(userName) {
-    const botToken = "7524053673:AAF-U-BKDwSgu4itaHfROczfjPXzILADHF0";  // Ganti dengan token bot Telegram Anda
-    const chatId = "6581974100";      // Ganti dengan chat ID Anda
-
-    const message = `Pengunjung baru dengan nama: ${userName}`;
-
-    // Kirim permintaan POST ke API Telegram
-    fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            chat_id: chatId,
-            text: message
-        })
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.ok) {
-            console.log("Nama berhasil dikirim ke Telegram.");
-        } else {
-            console.error("Gagal mengirim nama ke Telegram:", data.description);
-        }
-    })
-    .catch(error => {
-        console.error("Error saat mengirim nama ke Telegram:", error);
-    });
-}
-          function updateClock() {
+        // Fungsi untuk memperbarui waktu
+        function updateClock() {
             const options = {
-                timeZone: 'Asia/Jakarta', 
+                timeZone: 'Asia/Jakarta',
                 hour: '2-digit',
                 minute: '2-digit',
                 second: '2-digit'
@@ -813,9 +716,11 @@ function sendToTelegram(userName) {
             document.getElementById('clock').textContent = now;
         }
 
-        setInterval(updateClock, 1000); // Update every second
-        updateClock(); // Initial call
+        setInterval(updateClock, 1000); // Perbarui waktu setiap detik
+        updateClock(); // Pemanggilan awal
+        
+        
     </script>
 </body>
 
-</html>
+	</html>
